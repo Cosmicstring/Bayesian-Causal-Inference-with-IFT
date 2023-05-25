@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=${SLURM_CPUS_PER_TASK}
+export MKL_NUM_THREADS=${SLURM_CPUS_PER_TASK}
+export VECLIB_MAXIMUM_THREADS=${SLURM_CPUS_PER_TASK}
+export NUMEXPR_NUM_THREADS=${SLURM_CPUS_PER_TASK}
+export OMP_THREAD_LIMIT=${SLURM_CPUS_PER_TASK}
+export OMP_PLACES=cores
+
+python3 ../do_bci_inference.py "${@}"

@@ -1,0 +1,10 @@
+---------------------------------
+file:
+pair0001.txt
+Y->X: 
+ mean : -inf , upper : -inf , lower : -inf
+ H_lh : -inf +- -inf 
+ xi2 : -inf 
+ Tr_reduce_Lambda : -inf (+-inf)
+ Tr_Ln_Lambda : -inf (+-inf)
+---------------------------------

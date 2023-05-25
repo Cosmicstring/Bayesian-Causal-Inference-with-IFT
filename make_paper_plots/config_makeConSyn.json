@@ -1,0 +1,533 @@
+{
+	"mock": 0,
+	"real" : 1,
+	"mock_model" : 
+	{
+		"model_flag" : "X<-Z->Y",
+		"X->Y" :
+		{
+			"seed" : 42,
+			"shape_spaces" :
+			{	
+				"position_space" : [512]
+			},
+			"beta" :
+			{
+				"ps_flag" : "correlated_field",
+				"ps_analytic" :
+				{
+					"a" : 1.0,
+					"deg" : 6,
+					"offset" : 1.0
+				},
+				"ps_fluctuations": 
+				{
+					"offset_amplitude_mean" : 0.0,
+					"offset_amplitude_stddev" : 1e-6,
+					"offset_amplitude_stddev_stddev" : 1e-6,
+
+					"fluctuations_mean" : 1.0,
+					"fluctuations_stddev" : 1e-2,
+					"flexibility_mean" : 1.0,
+					"flexibility_stddev" : 0.5,
+					"asperity_mean" : 0.1,
+					"asperity_stddev" : 0.5,
+					"loglogavgslope_mean" : -3.0,
+					"loglogavgslope_stddev" : 0.5
+				}
+			},
+			"f" :
+			{
+				"ps_flag" : "correlated_field",
+				"ps_analytic" :
+				{
+					"a" : 1.0,
+					"deg" : 6,
+					"offset" : 1.0
+				},
+				"ps_fluctuations" :
+				{
+					"offset_amplitude_mean" : 0.0,
+					"offset_amplitude_stddev" : 1e-6,
+					"offset_amplitude_stddev_stddev" : 1e-6,
+
+					"fluctuations_mean" : 1.0,
+					"fluctuations_stddev" : 1e-2,
+					"flexibility_mean" : 1.0,
+					"flexibility_stddev" : 0.5,
+					"asperity_mean" : 0.1,
+					"asperity_stddev" : 0.5,
+					"loglogavgslope_mean" : -3.0,
+					"loglogavgslope_stddev" : 0.5	
+				}
+			},
+			"output" :
+			{
+				"file_path" : "mock_data/"
+			}
+		},
+		"X<-Z->Y" :
+		{
+			"seed" : 13,
+			"shape_spaces" :
+			{	
+				"position_space" : 512
+			},
+			"noise_scale": 1e-3,
+			"Z" :
+			{
+				"ps_flag" : "correlated_field",
+				"ps_analytic" :
+				{
+					"a" : 1.0,
+					"deg" : 6,
+					"offset" : 1.0
+				},
+				"ps_fluctuations": 
+				{
+					"offset_amplitude_mean" : 0.0,
+					"offset_amplitude_stddev" : 1.0,
+					"offset_amplitude_stddev_stddev" : 1e-1,
+
+					"fluctuations_mean" : 1e-1,
+					"fluctuations_stddev" : 1e-2,
+					"flexibility_mean" : 1e-10,
+					"flexibility_stddev" : 1e-15,
+					"asperity_mean" : 1e-10,
+					"asperity_stddev" : 1e-15,
+
+					"loglogavgslope_mean" : -1.0,
+					"loglogavgslope_stddev" : 0.5
+				}
+			},
+			"f_X" :
+			{
+				"ps_flag" : "correlated_field",
+				"ps_analytic" :
+				{
+					"a" : 1.0,
+					"deg" : 6,
+					"offset" : 1.0
+				},
+				"ps_fluctuations" :
+				{
+					"offset_amplitude_mean" : 0.0,
+					"offset_amplitude_stddev" : 0.5,
+					"offset_amplitude_stddev_stddev" : 5e-1,
+
+					"fluctuations_mean" : 1.5,
+					"fluctuations_stddev" : 1e-3,
+					"flexibility_mean" : 1e-1,
+					"flexibility_stddev" : 1e-3,
+					"asperity_mean" : 1e-10,
+					"asperity_stddev" : 1e-15,
+
+					"loglogavgslope_mean" : -2.0,
+					"loglogavgslope_stddev" : 0.5		
+				}
+			},
+			"f_Y" :
+			{
+				"ps_flag" : "correlated_field",
+				"ps_analytic" :
+				{
+					"a" : 1.0,
+					"deg" : 6,
+					"offset" : 1.0
+				},
+				"ps_fluctuations" :
+				{
+					"offset_amplitude_mean" : 0.0,
+					"offset_amplitude_stddev" : 0.5,
+					"offset_amplitude_stddev_stddev" : 5e-1,
+
+					"fluctuations_mean" : 1.5,
+					"fluctuations_stddev" : 1e-3,
+					"flexibility_mean" : 1e-1,
+					"flexibility_stddev" : 1e-3,
+					"asperity_mean" : 1e-10,
+					"asperity_stddev" : 1e-15,
+
+					"loglogavgslope_mean" : -2.0,
+					"loglogavgslope_stddev" : 0.5		
+				}
+			}
+		}	
+	},
+	"real_model" :
+	{
+		"Nbins" : 512,
+		"numerics":
+		{
+			"ic_sampling":
+			{
+				"deltaE" : 0.1,
+				"iteration_limit" : 250
+			},
+			"ic_newton" :
+			{
+				"deltaE" : 1e-5,
+				"iteration_limit" : 5
+			}
+		},
+		"X || Y" :
+		{
+			"infer_noise" : 1,
+			"seed" : 42,
+			"noise_scale":
+			{
+				"alpha" : 3.0,
+				"q" : 1.0
+			},
+			"beta" :
+			{
+				"__comment" : {"The following quantities below are in the np.log system" : 0,
+								   "except loglogavgslope stddev and loglogavgslope mean" : 0},
+				"ps_flag" : "correlated_field",
+				"ps_analytic" :
+				{
+					"a" : 1.0,
+					"deg" : 6,
+					"offset" : 1.0
+				},
+				"ps_fluctuations": 
+				{
+					"offset_amplitude_mean" : 0.0,
+					"offset_amplitude_stddev" : 5.0,
+					"offset_amplitude_stddev_stddev" : 0.1,
+
+					"fluctuations_mean" : 5.0,
+					"fluctuations_stddev" : 1e-1,
+					"flexibility_mean" : 1e-5,
+					"flexibility_stddev" : 1e-10,
+					"asperity_mean" : 1e-10,
+					"asperity_stddev" : 1e-15,
+					
+					"loglogavgslope_mean" : -2.5,
+					"loglogavgslope_stddev" : 0.5
+				}
+			}
+		},
+		"bivariate" :
+		{
+			"infer_noise": 1.0,
+			"seed" : 42,
+			"v1":
+			{
+				"noise_scale":
+				{
+					"alpha" : 3.0,
+					"q" : 1.0
+				},
+				"beta" :
+			    {	
+                    "__comment" : {"The following quantities below are in the np.log system" : 0,
+                                       "except loglogavgslope stddev and loglogavgslope mean" : 0},
+                    "ps_flag" : "correlated_field",
+                    "ps_analytic" :
+                    {
+                        "a" : 1.0,
+                        "deg" : 6,
+                        "offset" : 1.0
+                    },
+                    "ps_fluctuations": 
+                    {
+                        
+                        "offset_amplitude_mean" : 0.0,
+                        "offset_amplitude_stddev" : 5.0,
+                        "offset_amplitude_stddev_stddev" : 0.1,
+
+                        "fluctuations_mean" : 5.0,
+                        "fluctuations_stddev" : 1e-1,
+
+                        "flexibility_mean" : 1e-5,
+                        "flexibility_stddev" : 1e-10,
+                        "asperity_mean" : 1e-10,
+                        "asperity_stddev" : 1e-15,
+                        "loglogavgslope_mean" : -2.5,
+                        "loglogavgslope_stddev" : 0.5
+                    }
+                },
+				"f" :
+				{
+					"ps_flag" : "correlated_field",
+					"ps_analytic" :
+					{
+						"a" : 1.0,
+						"deg" : 6,
+						"offset" : 1.0
+					},
+					"ps_fluctuations" :
+					{
+						"offset_amplitude_mean" : 0.5,
+						"offset_amplitude_stddev" : 0.5,
+						"offset_amplitude_stddev_stddev" : 0.1,
+
+						"fluctuations_mean" : 1.0,
+						"fluctuations_stddev" : 1e-1,
+						"flexibility_mean" : 1e-1,
+						"flexibility_stddev" : 1e-3,
+						"asperity_mean" : 1e-10,
+						"asperity_stddev" : 1e-15,
+
+						"loglogavgslope_mean" : -2.0,
+						"loglogavgslope_stddev" : 0.5			
+					}
+				}
+			},
+			"v2":
+			{
+				"noise_scale":
+				{
+					"alpha" : 3.0,
+					"q" : 1.0
+				},
+				"f_X" :
+				{
+					"ps_flag" : "correlated_field",
+					"ps_analytic" :
+					{
+						"a" : 1.0,
+						"deg" : 6,
+						"offset" : 1.0
+					},
+					"ps_fluctuations" :
+					{
+						"offset_amplitude_mean" : 0.0,
+						"offset_amplitude_stddev" : 1.0,
+						"offset_amplitude_stddev_stddev" : 0.1,
+
+						"fluctuations_mean" : 5.0,
+						"fluctuations_stddev" : 0.5,
+						"flexibility_mean" : 1.0,
+						"flexibility_stddev" : 1e-2,
+						"asperity_mean" : 1e-10,
+						"asperity_stddev" : 1e-15,
+
+						"loglogavgslope_mean" : -1.5,
+						"loglogavgslope_stddev" : 1e-2			
+					}
+				},
+				"f_Y" :
+				{
+					"ps_flag" : "correlated_field",
+					"ps_analytic" :
+					{
+						"a" : 1.0,
+						"deg" : 6,
+						"offset" : 1.0
+					},
+					"ps_fluctuations" :
+					{
+						"offset_amplitude_mean" : 0.5,
+						"offset_amplitude_stddev" : 2.0,
+						"offset_amplitude_stddev_stddev" : 0.1,
+
+						"fluctuations_mean" : 2.0,
+						"fluctuations_stddev" : 1e-1,
+						"flexibility_mean" : 1e-1,
+						"flexibility_stddev" : 1e-3,
+						"asperity_mean" : 1e-10,
+						"asperity_stddev" : 1e-15,
+
+						"loglogavgslope_mean" : -2.0,
+						"loglogavgslope_stddev" : 0.5			
+					}
+				}
+			},
+			"v3":
+			{
+				"f_X" :
+				{
+
+					"noise_scale":
+					{
+						"alpha" : 3.0,
+						"q" : 1.0
+					},
+					"ps_flag" : "correlated_field",
+					"ps_analytic" :
+					{
+						"a" : 1.0,
+						"deg" : 6,
+						"offset" : 1.0
+					},
+					"ps_fluctuations" :
+					{
+						"offset_amplitude_mean" : 0.0,
+						"offset_amplitude_stddev" : 1.0,
+						"offset_amplitude_stddev_stddev" : 0.1,
+
+						"fluctuations_mean" : 1e-1,
+						"fluctuations_stddev" : 1e-2,
+						"flexibility_mean" : 1e-12,
+						"flexibility_stddev" : 1e-15,
+						"asperity_mean" : 1e-10,
+						"asperity_stddev" : 1e-15,
+
+						"loglogavgslope_mean" : -2.0,
+						"loglogavgslope_stddev" : 5e-1			
+					}
+				},
+				"f_Y" :
+				{
+
+					"noise_scale":
+					{
+						"alpha" : 1.0,
+						"q" : 1.0
+					},
+					"ps_flag" : "correlated_field",
+					"ps_analytic" :
+					{
+						"a" : 1.0,
+						"deg" : 6,
+						"offset" : 1.0
+					},
+					"ps_fluctuations" :
+					{
+						"offset_amplitude_mean" : 0.5,
+						"offset_amplitude_stddev" : 0.5,
+						"offset_amplitude_stddev_stddev" : 0.1,
+
+						"fluctuations_mean" : 2.0,
+						"fluctuations_stddev" : 0.5,
+						"flexibility_mean" : 1e-1,
+						"flexibility_stddev" : 0.5,
+						"asperity_mean" : 1e-10,
+						"asperity_stddev" : 1e-15,
+
+						"loglogavgslope_mean" : -2.0,
+						"loglogavgslope_stddev" : 1e-2			
+					}
+				}
+			},
+			"v4" :
+			{
+				"noise_scale":
+				{
+					"alpha" : 3.0,
+					"q" : 1.0
+				},
+				"f" :
+				{
+					"ps_flag" : "correlated_field",
+					"ps_analytic" :
+					{
+						"a" : 1.0,
+						"deg" : 6,
+						"offset" : 1.0
+					},
+					"ps_fluctuations" :
+					{
+						"offset_amplitude_mean" : 0.5,
+						"offset_amplitude_stddev" : 0.5,
+						"offset_amplitude_stddev_stddev" : 0.1,
+
+						"fluctuations_mean" : 2.0,
+						"fluctuations_stddev" : 0.5,
+						"flexibility_mean" : 1e-1,
+						"flexibility_stddev" : 0.5,
+						"asperity_mean" : 1e-10,
+						"asperity_stddev" : 1e-15,
+
+						"loglogavgslope_mean" : -2.0,
+						"loglogavgslope_stddev" : 1e-2			
+					}
+				}
+			}
+		},
+		"X<-Z->Y" :
+		{
+			"infer_noise" : 1,
+			"seed" : 42,
+			"noise_scale" :
+			{
+				"alpha" : 1.0,
+				"q" : 1e-6
+			},
+			"Z" :
+			{
+				"ps_flag" : "correlated_field",
+				"ps_analytic" :
+				{
+					"a" : 1.0,
+					"deg" : 6,
+					"offset" : 1.0
+				},
+				"ps_fluctuations": 
+				{
+					"offset_amplitude_mean" : 0.0,
+					"offset_amplitude_stddev" : 1.0,
+					"offset_amplitude_stddev_stddev" : 1e-1,
+
+					"fluctuations_mean" : 5e-1,
+					"fluctuations_stddev" : 1e-2,
+					"flexibility_mean" : 1e-1,
+					"flexibility_stddev" : 1e-2,
+					"asperity_mean" : 1e-10,
+					"asperity_stddev" : 1e-15,
+
+					"loglogavgslope_mean" : -3.0,
+					"loglogavgslope_stddev" : 0.5
+				}
+			},
+			"f_X" :
+			{
+				"ps_flag" : "correlated_field",
+				"ps_analytic" :
+				{
+					"a" : 1.0,
+					"deg" : 6,
+					"offset" : 1.0
+				},
+				"ps_fluctuations" :
+				{
+					"offset_amplitude_mean" : 0.5,
+					"offset_amplitude_stddev" : 0.5,
+					"offset_amplitude_stddev_stddev" : 0.5,
+
+					"fluctuations_mean" : 1.0,
+					"fluctuations_stddev" : 1e-1,
+
+					"flexibility_mean" : 5e-1,
+					"flexibility_stddev" : 1e-2,
+					
+					"asperity_mean" : 1e-10,
+					"asperity_stddev" : 1e-15,
+
+					"loglogavgslope_mean" : -2.5,
+					"loglogavgslope_stddev" : 0.25		
+				}
+			},
+			"f_Y" :
+			{
+				"ps_flag" : "correlated_field",
+				"ps_analytic" :
+				{
+					"a" : 1.0,
+					"deg" : 6,
+					"offset" : 1.0
+				},
+				"ps_fluctuations" :
+				{
+					"offset_amplitude_mean" : 0.5,
+					"offset_amplitude_stddev" : 0.5,
+					"offset_amplitude_stddev_stddev" : 0.5,
+					
+					"fluctuations_mean" : 1.0,
+					"fluctuations_stddev" : 1e-1,
+
+					"flexibility_mean" : 5e-1,
+					"flexibility_stddev" : 1e-2,
+				
+					"asperity_mean" : 1e-10,
+					"asperity_stddev" : 1e-15,
+
+					"loglogavgslope_mean" : -2.5,
+					"loglogavgslope_stddev" : 0.25			
+				}
+			}
+		}
+	}
+}
